@@ -1,11 +1,21 @@
 # PiHole_Monitor
 Display PiHole statistics on ssd1306 128x64 I²C LCD
-> Inspired by [this tutorial](https://www.raspberrypi-spy.co.uk/2019/10/pi-hole-oled-status-screen/) but tweaked, updated for 2022 libraries and without LED
+> Inspired by [this tutorial](https://www.raspberrypi-spy.co.uk/2019/10/pi-hole-oled-status-screen/) but tweaked, updated for 2022 libraries and without LED (and it works)
 
 ## Circuit Diagram
 ![Circuit Diagram](https://github.com/Rob2n/PiHole_Monitor/blob/main/PiHole_Monitor_sketch.svg)
 
 ## Installation
+
+For Raspberry OS, make sure I²C is enabled within config
+```
+sudo raspi-config
+```
+
+Install required libraries (might work without all of them but just in case)
+```
+sudo apt install python3-gpiozero & pip install RPi.GPIO adafruit-circuitpython-ssd1306
+```
 
 Download PiHole_mon.py and font file
 ```
